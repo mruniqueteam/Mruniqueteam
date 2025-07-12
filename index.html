@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Bangla Cracking Course | প্রিমিয়াম অ্যাকাউন্ট ক্র্যাকিং মাস্টারক্লাস</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Kalpurush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF4D79;
+            --secondary: #2A2D43;
+            --accent: #00F5A7;
+            --dark: #12141F;
+            --light: #F5F7FA;
+            --gradient: linear-gradient(135deg, var(--primary), #FF8E53);
+            --gradient-accent: linear-gradient(135deg, var(--accent), #00D4FF);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Kalpurush', 'Hind Siliguri', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+        
+        /* Bangla Font Styling */
+        .bangla {
+            font-family: 'Kalpurush', 'Hind Siliguri', sans-serif;
+            line-height: 1.8;
+        }
+        
+        /* Glow Animation */
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px rgba(255, 77, 121, 0.5); }
+            50% { text-shadow: 0 0 20px rgba(255, 77, 121, 0.8), 0 0 30px rgba(255, 77, 121, 0.4); }
+            100% { text-shadow: 0 0 10px rgba(255, 77, 121, 0.5); }
+        }
+        
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            background: url('https://images.unsplash.com/photo-1563770660941-10a63607739e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(18, 20, 31, 0.9) 0%, rgba(42, 45, 67, 0.8) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+        }
+        
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--accent), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: glow 3s ease-in-out infinite;
+            line-height: 1.2;
+        }
+        
+        .hero .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--light);
+        }
+        
+        /* Animated Grid Background */
+        .grid-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: gridMove 100s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes gridMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 1000px 1000px; }
+        }
+        
+        /* Floating Elements */
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.7;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(255, 45, 85, 0.4);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(255, 45, 85, 0.6);
+        }
+        
+        .cta-button:active {
+            transform: translateY(2px);
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        /* Course Modules Section */
+        .modules {
+            padding: 100px 20px;
+            position: relative;
+            background: var(--secondary);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 3px;
+        }
+        
+        .module-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .module-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .module-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent);
+        }
+        
+        .module-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .module-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 3px;
+        }
+        
+        .module-list {
+            list-style: none;
+        }
+        
+        .module-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .module-item:last-child {
+            border-bottom: none;
+        }
+        
+        .module-item::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 20px;
+            background: var(--dark);
+            text-align: center;
+            position: relative;
+        }
+        
+        .pricing-card {
+            background: rgba(0, 245, 167, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 0 auto;
+            border: 2px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent, rgba(0, 245, 167, 0.05), transparent);
+            z-index: 0;
+        }
+        
+        .pricing-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .price {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin: 20px 0;
+            color: var(--accent);
+        }
+        
+        .price span {
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+        
+        .enroll-button {
+            background: var(--gradient-accent);
+            color: var(--dark);
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 245, 167, 0.3);
+            font-weight: 600;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        
+        .enroll-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 245, 167, 0.4);
+        }
+        
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 25px rgba(255, 45, 85, 0.4);
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .fab:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.3rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .module-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <!-- Course Modules Section -->
+<section class="modules">
+    <div class="section-header">
+        <h2 class="bangla">কোর্স মডিউলসমূহ</h2>
+        <p class="bangla">এই কোর্সে যা যা শিখবেন</p>
+    </div>
+    
+    <div class="module-container">
+        <!-- Step 1: Binning -->
+        <div class="module-card">
+            <h3 class="bangla">স্টেপ ১: বিনিং</h3>
+            <ul class="module-list">
+                <li class="module-item bangla">🧡 বিন কি?</li>
+                <li class="module-item bangla">🧡 বিন কিভাবে কাজ করে?</li>
+                <li class="module-item bangla">🧡 বিন কিভাবে বের করে বা হান্ট করে?</li>
+                <li class="module-item bangla">🧡 কিভাবে প্রাইভেট বিন বের করে?</li>
+                <li class="module-item bangla">🧡 কোন বিন কোন সাইটে কাজ করে?</li>
+                <li class="module-item bangla">🧡 কিভাবে বিন দিয়ে ১০০% সাকসেস হওয়া যায়</li>
+                <li class="module-item bangla">🧡 বিভিন্ন বিনের ক্ষেত্রে বিভিন্ন VPN/IP এর ব্যাবহার</li>
+                <li class="module-item bangla">🧡 কিছু হাইডেন ট্রিক (শুধু কোর্সে পাওয়া যাবে)</li>
+                <li class="module-item bangla">🧡 নতুন মেথড ও আপডেট</li>
+            </ul>
+        </div>
+        
+        <!-- Step 2: Carding -->
+        <div class="module-card">
+            <h3 class="bangla">স্টেপ ২: কার্ডিং</h3>
+            <ul class="module-list">
+                <li class="module-item bangla">🧡 চার্জ সিসি কি?</li>
+                <li class="module-item bangla">🧡 চার্জ সিসি দিয়ে কিভাবে কার্ডিং করতে হয়?</li>
+                <li class="module-item bangla">🧡 কিভাবে চার্জ সিসি পেতে হয়?</li>
+                <li class="module-item bangla">🧡 এসকে কি?</li>
+                <li class="module-item bangla">🧡 এসকে কিভাবে কাজ করে?</li>
+                <li class="module-item bangla">🧡 চেকার কি ও কিভাবে কাজ করে?</li>
+                <li class="module-item bangla">🧡 চেকার দিয়ে কিভাবে চার্জ সিসি নিতে হয়?</li>
+                <li class="module-item bangla">🧡 গোপন কার্ডিং ট্রিকস (শুধু কোর্সে)</li>
+                <li class="module-item bangla">🧡 নতুন কার্ডিং মেথড</li>
+            </ul>
+        </div>
+        
+        <!-- Step 3: Cookies Cracking -->
+        <div class="module-card">
+            <h3 class="bangla">স্টেপ ৩: কুকিজ ক্র্যাকিং</h3>
+            <ul class="module-list">
+                <li class="module-item bangla">🧡 কুকিজ কি?</li>
+                <li class="module-item bangla">🧡 কুকিজ কিভাবে কাজ করে?</li>
+                <li class="module-item bangla">🧡 কিভাবে কুকিজ ক্র্যাক করতে হয়?</li>
+                <li class="module-item bangla">🧡 পাসওয়ার্ড ছাড়া একাউন্ট এক্সেস</li>
+                <li class="module-item bangla">🧡 একসাথে নেটফ্লিক্স/যেকোনো সাইট ক্র্যাকিং</li>
+                <li class="module-item bangla">🧡 এ্যামাজন, ইয়াহু একাউন্ট এক্সেস</li>
+                <li class="module-item bangla">🧡 গোপন কুকিজ ট্রিকস (শুধু কোর্সে)</li>
+            </ul>
+        </div>
+
+        <!-- Step 4: Premium Account Cracking -->
+        <div class="module-card">
+            <h3 class="bangla">স্টেপ ৪: প্রিমিয়াম একাউন্ট ক্র্যাকিং</h3>
+            <ul class="module-list">
+                <li class="module-item bangla">🧡 ক্র্যাকিং কি?</li>
+                <li class="module-item bangla">🧡 ক্র্যাকিং এর সকল পদ্ধতি</li>
+                <li class="module-item bangla">🧡 প্রিমিয়াম একাউন্ট ক্র্যাকিং</li>
+                <li class="module-item bangla">🧡 ক্র্যাকিং টুলস ব্যবহার</li>
+                <li class="module-item bangla">🧡 RDP এবং VPS সেটআপ</li>
+                <li class="module-item bangla">🧡 প্রাইভেট ডাটাবেইজ ডাম্প</li>
+                <li class="module-item bangla">🧡 প্রাইভেট কনফিগ বানানো</li>
+                <li class="module-item bangla">🧡 গোপন ক্র্যাকিং টেকনিক</li>
+            </ul>
+        </div>
+
+        <!-- Step 5: Mod APK -->
+        <div class="module-card">
+            <h3 class="bangla">স্টেপ ৫: মোড APK (সিক্রেট মডিউল)</h3>
+            <ul class="module-list">
+                <li class="module-item bangla">🧡 যেকোন প্রিমিয়াম অ্যাপ মোড করা</li>
+                <li class="module-item bangla">🧡 বিশেষ টেকনিক শুধু কোর্সে</li>
+            </ul>
+        </div>
+
+        <!-- Step 6: Premium Bundle -->
+        <div class="module-card full-width">
+            <h3 class="bangla">স্টেপ ৬: প্রিমিয়ার সাবস্ক্রিপশন বান্ডেল</h3>
+            <div class="tool-categories">
+                <!-- Cloud Tools -->
+                <div class="tool-category">
+                    <h4>☁️ Cloud Tools</h4>
+                    <ul>
+                        <li>🟢 Envato Elements (Cloud)</li>
+                        <li>🟢 Semrush (Cloud)</li>
+                        <li>🟢 ChatGPT (Cloud)</li>
+                        <li>🟢 Links Indexer (Cloud)</li>
+                    </ul>
+                </div>
+                
+                <!-- Graphic Design -->
+                <div class="tool-category">
+                    <h4>🎨 Graphic Design</h4>
+                    <ul>
+                        <li>🟢 Canva Pro</li>
+                        <li>🟢 Placeit</li>
+                        <li>🟢 Vista Create</li>
+                        <li>🟢 Picsart</li>
+                        <li>🟢 Sora</li>
+                        <li>🟢 PhotoRoom</li>
+                        <li>🟢 Figma</li>
+                        <li>🟢 Uizard io</li>
+                        <li>🟢 Prezi.ai</li>
+                        <li>🟢 Pic Monkey</li>
+                        <li>🟢 Beautiful Ai</li>
+                        <li>🟢 Icons8</li>
+                        <li>🟢 Humanpal (AI Video)</li>
+                        <li>🟢 Sketchgenius</li>
+                    </ul>
+                </div>
+                
+                <!-- SEO & Marketing -->
+                <div class="tool-category">
+                    <h4>📈 SEO & Marketing</h4>
+                    <ul>
+                        <li>🟢 Moz Pro</li>
+                        <li>🟢 Wordtracker</li>
+                        <li>🟢 SimilarWeb</li>
+                        <li>🟢 Helium 10</li>
+                        <li>🟢 Sell The Trend</li>
+                        <li>🟢 Indexification</li>
+                        <li>🟢 SEO Site Checkup</li>
+                        <li>🟢 Storybase</li>
+                        <li>🟢 AnswerThePublic</li>
+                    </ul>
+                </div>
+                
+                <!-- AI & Writing -->
+                <div class="tool-category">
+                    <h4>✍️ AI & Writing</h4>
+                    <ul>
+                        <li>🟢 ChatGPT</li>
+                        <li>🟢 Grammarly</li>
+                        <li>🟢 You.com</li>
+                        <li>🟢 Perplexity Ai</li>
+                        <li>🟢 Blackbox Ai</li>
+                        <li>🟢 Linguix Ai</li>
+                        <li>🟢 Quillbot</li>
+                        <li>🟢 Wordtune</li>
+                        <li>🟢 Closer Copy</li>
+                        <li>🟢 Hix ai</li>
+                        <li>🟢 Slideshare</li>
+                        <li>🟢 Stealthwriter</li>
+                        <li>🟢 Cramly AI</li>
+                        <li>🟢 Word Counter</li>
+                    </ul>
+                </div>
+                
+                <!-- Video Editing -->
+                <div class="tool-category">
+                    <h4>🎬 Video Editing</h4>
+                    <ul>
+                        <li>🟢 CapCut</li>
+                        <li>🟢 Motion Array</li>
+                        <li>🟢 Epidemic Sound</li>
+                    </ul>
+                </div>
+                
+                <!-- Learning -->
+                <div class="tool-category">
+                    <h4>🎓 Learning</h4>
+                    <ul>
+                        <li>🟢 EdX</li>
+                        <li>🟢 Scribd</li>
+                        <li>🟢 Duolingo Super</li>
+                        <li>🟢 Udemy Business</li>
+                        <li>🟢 Coursera</li>
+                    </ul>
+                </div>
+                
+                <!-- Bonus Tools -->
+                <div class="tool-category">
+                    <h4>🟡 Bonus Tools</h4>
+                    <ul>
+                        <li>🟡 Netflix (Extension Access)</li>
+                        <li>🟡 Prime Video (Extension Access)</li>
+                        <li>🟡 VidIQ Boost</li>
+                        <li>🟡 Icons8</li>
+                        <li>🟡 Vidyard</li>
+                        <li>🟡 Quetext</li>
+                        <li>🟡 Niche Scraper</li>
+                        <li>🟡 Ai images Generator</li>
+                        <li>🟡 Artistly</li>
+                        <li>🟡 Leonardo ai</li>
+                        <li>🟡 Designbeast</li>
+                        <li>🟡 Slidebean</li>
+                        <li>🟡 Ai studios</li>
+                        <li>🟡 Toons AI</li>
+                        <li>🟡 SEO Optimer</li>
+                        <li>🟡 Woorank</li>
+                        <li>🟡 Writerzen</li>
+                        <li>🟡 Mangools</li>
+                        <li>🟡 Word AI</li>
+                        <li>🟡 Creaitor AI</li>
+                        <li>🟡 Render Forest</li>
+                        <li>🟡 Freepass ai</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 7: Unlimited Resources -->
+        <div class="module-card full-width">
+            <h3 class="bangla">স্টেপ ৭: আনলিমিটেড প্রিমিয়াম রিসোর্স</h3>
+            <div class="resource-categories">
+                <!-- AI Bundle -->
+                <div class="resource-category">
+                    <h4>🧠 AI & Automation Bundle:</h4>
+                    <ul>
+                        <li>- Google Gemini Access</li>
+                        <li>- 30,000+ ChatGPT Prompts</li>
+                        <li>- 5,000+ Advanced ChatGPT Prompts (Bonus)</li>
+                        <li>- 9000+ AI Tools Database</li>
+                        <li>- 2100+ Midjourney Prompts</li>
+                        <li>- 60,000+ AI Reels Bundle</li>
+                        <li>- 4000 Editable Reels Bundle</li>
+                        <li>- All-in-One YouTuber Kit</li>
+                    </ul>
+                </div>
+                
+                <!-- Software -->
+                <div class="resource-category">
+                    <h4>💻 Premium Software Collection:</h4>
+                    <ul>
+                        <li>- 150+ Pre-Activated Premium Software</li>
+                        <li>- All Adobe Software (Activated):</li>
+                        <li>- Adobe Premiere Pro, After Effects, Illustrator</li>
+                        <li>- Photoshop, XD, Audition, InDesign</li>
+                        <li>- Wondershare Filmora 12</li>
+                        <li>- Wondershare PDFelement</li>
+                        <li>- IDM Lifetime</li>
+                        <li>- CapCut PC</li>
+                        <li>- Camtasia 2023</li>
+                        <li>- Office 2021 Lifetime</li>
+                        <li>- CorelDRAW 2023</li>
+                        <li>- Windows 10 & 11 Activated</li>
+                    </ul>
+                </div>
+                
+                <!-- Mobile Apps -->
+                <div class="resource-category">
+                    <h4>📱 Premium Mobile Apps:</h4>
+                    <ul>
+                        <li>- CapCut</li>
+                        <li>- VN Editor</li>
+                        <li>- KineMaster Pro</li>
+                        <li>- InShot</li>
+                        <li>- Filmora Mobile</li>
+                        <li>- PicsArt</li>
+                        <li>- B612</li>
+                        <li>- Benime Pro</li>
+                    </ul>
+                </div>
+                
+                <!-- Graphics Bundle -->
+                <div class="resource-category">
+                    <h4>🎨 Graphics & Design Mega Bundle (300 GB+):</h4>
+                    <ul>
+                        <li>- 100,000+ T-Shirt Designs</li>
+                        <li>- 6000+ Kind Activity Worksheets</li>
+                        <li>- 4000+ Graphic Designs & Assets</li>
+                        <li>- 30,000+ Social Media Post Bundles</li>
+                        <li>- 5000+ Infographics Bundle</li>
+                        <li>- 5000+ Motivational Posts</li>
+                        <li>- 600 Logo Templates</li>
+                        <li>- Business Cards & Certificate Bundles</li>
+                        <li>- 6200 PSD Shapes</li>
+                        <li>- 5985 Premium Lightroom Presets</li>
+                        <li>- UI/UX Elements Pack</li>
+                        <li>- Animated Infographics Slides</li>
+                        <li>- Premium Business Letterheads</li>
+                        <li>- Posters, Flyers, Brochures</li>
+                        <li>- Photoshop Brushes, Actions</li>
+                        <li>- Clip Art (CDR/PNG/TIFF)</li>
+                        <li>- Festival, Wedding & Birthday PSD Templates</li>
+                        <li>- Calligraphy, Fonts, Motion Graphics, Banners</li>
+                        <li>- Instagram Post Templates</li>
+                        <li>- Editable Canva Templates (5000+)</li>
+                        <li>- 2TB Graphics Mega Bundle</li>
+                    </ul>
+                </div>
+                
+                <!-- Website Resources -->
+                <div class="resource-category">
+                    <h4>📦 Website & Development Resources:</h4>
+                    <ul>
+                        <li>- 1000+ Elementor Landing Pages</li>
+                        <li>- 600+ Premium WordPress Themes & Plugins</li>
+                        <li>- Paid Shopify Themes</li>
+                        <li>- Landing Page Templates</li>
+                        <li>- Web Design Resources</li>
+                    </ul>
+                </div>
+                
+                <!-- Courses -->
+                <div class="resource-category">
+                    <h4>📚 Learning & Paid Courses:</h4>
+                    <ul>
+                        <li>- 1000+ Paid Online Courses</li>
+                        <li>- Digital Marketing Masterclass</li>
+                        <li>- Affiliate Marketing</li>
+                        <li>- SEO Masterclass</li>
+                        <li>- Email Marketing</li>
+                        <li>- Google Ads</li>
+                        <li>- Facebook & Instagram Ads</li>
+                        <li>- Product Launch Mastery</li>
+                        <li>- Video Editing</li>
+                        <li>- Photography</li>
+                        <li>- Photoshop</li>
+                        <li>- App Development</li>
+                        <li>- Ecommerce</li>
+                        <li>- Blogging</li>
+                        <li>- Graphic Design</li>
+                        <li>- Instagram Mastery</li>
+                    </ul>
+                </div>
+                
+                <!-- Ebooks -->
+                <div class="resource-category">
+                    <h4>📖 Ebooks, Audiobooks & Templates:</h4>
+                    <ul>
+                        <li>- 150,000+ Ebooks & Audiobooks</li>
+                        <li>- 20,000+ Hindi & English Ebooks</li>
+                        <li>- 1000+ Excel Templates</li>
+                        <li>- Resume/CV Templates</li>
+                        <li>- Motivational Reels Bundle (14000+)</li>
+                        <li>- Sale Message Script Templates</li>
+                        <li>- 100+ Business Mega Bundle</li>
+                        <li>- Premium Ebook & Audiobook Pack</li>
+                    </ul>
+                </div>
+                
+                <!-- Other Tools -->
+                <div class="resource-category">
+                    <h4>🔐 Other Premium Tools:</h4>
+                    <ul>
+                        <li>- Premium VPN</li>
+                        <li>- YouTube Premium Access</li>
+                        <li>- 2TB Google Drive</li>
+                        <li>- Notebook LM Access</li>
+                        <li>- WhatsApp Marketing Software</li>
+                        <li>- 10GB Festival & Special Day Post Templates</li>
+                        <li>- Pan India Database Bundle</li>
+                        <li>- 100+ Hashtag Sets</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-total">
+                    <h4>📦 Total Storage:</h4>
+                    <p>🎁 4TB+ Digital Product Collection</p>
+                    <p>✅ ইত্যাদি সহ আরও অনেক Bundle রয়েছে এই package এ</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 8: Earning Methods -->
+        <div class="module-card">
+            <h3 class="bangla">স্টেপ ৮: টপ আর্নিং সিক্রেট মেথড</h3>
+            <ul class="module-list">
+                <li class="module-item bangla">🧡 ডেইলি লাইভ ইনকাম করার উপায়</li>
+                <li class="module-item bangla">🧡 মার্কেটে প্রোডাক্ট সেল করার কৌশল</li>
+                <li class="module-item bangla">🧡 ফ্রি ফেসবুক বুস্ট পদ্ধতি</li>
+                <li class="module-item bangla">🧡 প্রাকটিক্যাল ইনকাম ডেমো</li>
+                <li class="module-item bangla">🧡 নতুন আর্নিং স্ট্র্যাটেজি</li>
+            </ul>
+        </div>
+    </div>
+</section>
+  
+
+<!-- Pricing Section -->
+<section class="pricing">
+    <div class="section-header">
+        <h2 class="bangla">কোর্স ফি</h2>
+        <p class="bangla">একবার শিখুন, সারাজীবন ব্যবহার করুন</p>
+    </div>
+    
+    <div class="pricing-card">
+        <div class="pricing-content">
+            <h3 class="bangla">অ্যাডভান্স ক্র্যাকিং মাস্টারক্লাস</h3>
+            <div class="price bangla">৳২,৫০০</div>
+            <p class="bangla">প্রথম ১০ জনের জন্য বিশেষ ডিসকাউন্ট</p>
+            <!-- Replace YOUR_ACTUAL_FORM_ID with your real Google Form ID -->
+            <a href="https://forms.gle/Z5vAqpD5XVs77TX9A" class="enroll-button bangla" target="_blank">
+                এখনই এনরোল করুন
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Floating Elements Animation
+    const elements = ['🔒', '🔑', '💻', '🖥️', '📱', '🔓', '💾', '📊'];
+    const floatingContainer = document.getElementById('floatingElements');
+    
+    elements.forEach((element, index) => {
+        const el = document.createElement('div');
+        el.className = 'floating-element';
+        el.textContent = element;
+        el.style.fontSize = `${20 + Math.random() * 20}px`;
+        
+        // Apply random gradient color
+        const gradients = [
+            'linear-gradient(45deg, #FF2D55, #FF8E53)',
+            'linear-gradient(45deg, #00F5A7, #00D4FF)',
+            'linear-gradient(45deg, #8A2BE2, #4B0082)',
+            'linear-gradient(45deg, #00B4DB, #0083B0)'
+        ];
+        const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
+        el.style.background = randomGradient;
+        el.style.webkitBackgroundClip = 'text';
+        el.style.backgroundClip = 'text';
+        el.style.color = 'transparent';
+        el.style.padding = '5px';
+        el.style.borderRadius = '50%';
+        
+        // Random position
+        const left = Math.random() * 90;
+        const top = Math.random() * 90;
+        const delay = Math.random() * 5;
+        const duration = 5 + Math.random() * 10;
+        
+        el.style.left = `${left}%`;
+        el.style.top = `${top}%`;
+        el.style.animationDelay = `${delay}s`;
+        el.style.animationDuration = `${duration}s`;
+        
+        floatingContainer.appendChild(el);
+    });
+    
+    // Enroll Button Click (for smooth scroll)
+    document.getElementById('enrollBtn').addEventListener('click', () => {
+        document.querySelector('.pricing').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    // Animate elements on scroll
+    const animateOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.module-card, .pricing-card').forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(20px)";
+        el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        animateOnScroll.observe(el);
+    });
+</script>
+    
+
+</body>
+</html>
+
+ 
